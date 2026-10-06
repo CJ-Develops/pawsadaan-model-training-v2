@@ -1,0 +1,57 @@
+{
+  "manifest_format_version": 2,
+  "seed": 42,
+  "hellostreetcat_stage2": {
+    "seed": 42,
+    "minimum_images_per_stage2_identity": 5,
+    "eligible_identities": 54,
+    "train_identities": 38,
+    "validation_identities": 8,
+    "test_identities": 8,
+    "excluded_low_count_identities": 14,
+    "excluded_exact_duplicate_files": 4
+  },
+  "pawsadaan_stage3": {
+    "seed": 42,
+    "primary_identities": 77,
+    "train_identities": 53,
+    "validation_identities": 12,
+    "test_identities": 12,
+    "primary_images": 1351,
+    "supplemental_images_not_in_initial_run": 167,
+    "limited_images_held_out_initially": 323,
+    "v1_identities_with_unchanged_split": 60,
+    "identities_by_assignment_batch": {
+      "2026-09-25": {
+        "Abu": "train",
+        "Asher": "train",
+        "Astog": "train",
+        "Belly": "train",
+        "Chooey": "train",
+        "Mogu": "train",
+        "Oreo": "test",
+        "Panda Liit": "validation",
+        "Ponpon": "validation",
+        "ST. DOMINIC CALICO": "train",
+        "ST. DOMINIC HALF BLACK": "train",
+        "Tuxedo": "train",
+        "Tyler": "test",
+        "Victoria": "train",
+        "Yam": "validation",
+        "Z": "test"
+      },
+      "2026-09-25_trina": {
+        "Trina": "train"
+      }
+    },
+    "cross_session_identities": {
+      "Dolly": "validation",
+      "Kring": "test",
+      "Snow": "validation",
+      "Tyler": "test"
+    },
+    "reviewed_session_overrides": 16,
+    "session_limitation": "Most primary images lack reliable capture-session metadata. Identity-disjoint splitting prevents train/validation/test leakage; true cross-session query/gallery evaluation is assigned only where at least two capture sessions are known from EXIF or from the reviewed capture_sessions.csv."
+  },
+  "pawsadaan_identities_needing_an_additional_dated_session": 73
+}

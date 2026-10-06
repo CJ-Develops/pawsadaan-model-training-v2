@@ -1,0 +1,60 @@
+{
+  "a": "stage3_resnet50_d1_lr0.0003",
+  "b": "stage3_dinov2_vits14_d4_lr3e-05",
+  "dataset": "pawsadaan",
+  "split": "validation",
+  "query_cats": 12,
+  "bootstrap_rounds": 1000,
+  "metrics": {
+    "mAP": {
+      "a": 0.7094,
+      "b": 0.8209,
+      "gap": 0.1115,
+      "gap_ci95": [
+        0.0738,
+        0.1595
+      ],
+      "b_ahead_fraction": 1.0
+    },
+    "top1": {
+      "a": 0.9688,
+      "b": 0.9792,
+      "gap": 0.0104,
+      "gap_ci95": [
+        -0.0222,
+        0.0465
+      ],
+      "b_ahead_fraction": 0.626
+    },
+    "roc_auc": {
+      "a": 0.914,
+      "b": 0.9864,
+      "gap": 0.0724,
+      "gap_ci95": [
+        0.0143,
+        0.1682
+      ],
+      "b_ahead_fraction": 1.0
+    },
+    "tpr_at_fpr_1pct": {
+      "a": 0.6198,
+      "b": 0.7662,
+      "gap": 0.1464,
+      "gap_ci95": [
+        0.0567,
+        0.1876
+      ],
+      "b_ahead_fraction": 1.0
+    },
+    "single_reference_tpr_at_fpr_1pct": {
+      "a": 0.5104,
+      "b": 0.7396,
+      "gap": 0.2292,
+      "gap_ci95": [
+        0.0114,
+        0.3297
+      ],
+      "b_ahead_fraction": 0.977
+    }
+  }
+}

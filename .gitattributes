@@ -1,0 +1,2 @@
+# Frozen manifests are hash-checked byte for byte; never convert line endings.
+manifests/* -text

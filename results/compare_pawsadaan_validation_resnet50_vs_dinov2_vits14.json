@@ -1,0 +1,60 @@
+{
+  "a": "resnet50",
+  "b": "dinov2_vits14",
+  "dataset": "pawsadaan",
+  "split": "validation",
+  "query_cats": 12,
+  "bootstrap_rounds": 1000,
+  "metrics": {
+    "mAP": {
+      "a": 0.549,
+      "b": 0.5994,
+      "gap": 0.0505,
+      "gap_ci95": [
+        -0.0032,
+        0.1054
+      ],
+      "b_ahead_fraction": 0.964
+    },
+    "top1": {
+      "a": 0.9062,
+      "b": 0.9062,
+      "gap": 0.0,
+      "gap_ci95": [
+        -0.1111,
+        0.0737
+      ],
+      "b_ahead_fraction": 0.493
+    },
+    "roc_auc": {
+      "a": 0.8981,
+      "b": 0.941,
+      "gap": 0.0429,
+      "gap_ci95": [
+        0.0227,
+        0.0636
+      ],
+      "b_ahead_fraction": 1.0
+    },
+    "tpr_at_fpr_1pct": {
+      "a": 0.3932,
+      "b": 0.4404,
+      "gap": 0.0472,
+      "gap_ci95": [
+        -0.0123,
+        0.0974
+      ],
+      "b_ahead_fraction": 0.932
+    },
+    "single_reference_tpr_at_fpr_1pct": {
+      "a": 0.4167,
+      "b": 0.375,
+      "gap": -0.0417,
+      "gap_ci95": [
+        -0.16,
+        0.0971
+      ],
+      "b_ahead_fraction": 0.388
+    }
+  }
+}

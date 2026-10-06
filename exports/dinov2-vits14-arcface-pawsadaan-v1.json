@@ -1,0 +1,210 @@
+{
+  "format_version": 1,
+  "architecture": "dinov2-vits14-linear-bn-l2",
+  "dimensions": 512,
+  "preprocess": {
+    "size": 224,
+    "resize": 232,
+    "interpolation": "bilinear",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "exif_transpose": true
+  },
+  "model_version_base": "dinov2-vits14-arcface-pawsadaan-v1",
+  "backbone": {
+    "timm_model": "vit_small_patch14_dinov2.lvd142m",
+    "img_size": 224,
+    "num_classes": 0,
+    "pooling": "cls_token",
+    "feature_dimensions": 384,
+    "timm_version": "1.0.30",
+    "torch_version": "2.7.1+cu128"
+  },
+  "head": "Linear(384, 512, bias=False) -> BatchNorm1d(512) -> L2 normalize",
+  "source_checkpoint": "runs/stage3_dinov2_vits14_d4_lr3e-05/best.pt",
+  "source_checkpoint_sha256": "686f9f43e48132c340050ec0cc0f5dfe4433b302e2cffb037633322d9eae283a",
+  "manifest_sha256": {
+    "hellostreetcat_stage2.csv": "9058730c445f780a39640be3dcc6dbb4322d6fbd473b46fb9bbd220848ad7c73",
+    "pawsadaan_stage3.csv": "b0bbb0641b47453cc9962d6e9988f6dcafe68444817b9d9e6bc6a20865146c08",
+    "pawsadaan_session_collection_needed.csv": "d091732c462de9b3ac431c8bbd597c228fda0a7572fb8a9bf03d4a6eb4bfa3b9",
+    "split_summary.json": "c0b8612be7842f2536a594efc8d49b17304ac292850abb71a9a03ab8d240ffc9"
+  },
+  "match_threshold": 0.5165491104125977,
+  "calibration": {
+    "split": "val",
+    "gallery": "one reference per cat",
+    "rule": "Maximum TPR at pairwise FPR <= 0.01 on validation",
+    "verification": {
+      "threshold": 0.5165491104125977,
+      "true_positive": 71,
+      "false_positive": 51,
+      "true_negative": 5229,
+      "false_negative": 25,
+      "recall": 0.7396,
+      "false_positive_rate": 0.00966,
+      "precision": 0.582,
+      "report_catch_rate": 0.7396,
+      "report_false_alarm_rate": 0.4792,
+      "other_cats_per_report": 55
+    },
+    "service_preprocess_parity_min_cosine": 0.9999998211860657
+  },
+  "test_metrics": {
+    "split": "test",
+    "note": "reported once; nothing was tuned on it",
+    "at_threshold": {
+      "threshold": 0.5165491104125977,
+      "true_positive": 74,
+      "false_positive": 46,
+      "true_negative": 6169,
+      "false_negative": 39,
+      "recall": 0.6549,
+      "false_positive_rate": 0.0074,
+      "precision": 0.6167,
+      "report_catch_rate": 0.6549,
+      "report_false_alarm_rate": 0.2743,
+      "other_cats_per_report": 55
+    },
+    "all": {
+      "queries": 113,
+      "query_cats": 12,
+      "gallery_photos": 432,
+      "gallery_cats": 56,
+      "top1": 0.9558,
+      "top1_ci95": [
+        0.8991,
+        1.0
+      ],
+      "top5": 1.0,
+      "top5_ci95": [
+        1.0,
+        1.0
+      ],
+      "mAP": 0.7915,
+      "mAP_ci95": [
+        0.6998,
+        0.8745
+      ],
+      "verification": {
+        "roc_auc": 0.9753,
+        "positive_pairs": 1150,
+        "negative_pairs": 47666,
+        "tpr_at_fpr_0.01": 0.6296,
+        "threshold_at_fpr_0.01": 0.4838,
+        "tpr_at_fpr_0.001": 0.4052,
+        "threshold_at_fpr_0.001": 0.6036
+      },
+      "single_reference": {
+        "queries": 113,
+        "query_cats": 12,
+        "gallery_photos": 56,
+        "gallery_cats": 56,
+        "top1": 0.7345,
+        "top1_ci95": [
+          0.5236,
+          0.8932
+        ],
+        "top5": 0.8761,
+        "top5_ci95": [
+          0.713,
+          0.98
+        ],
+        "mAP": 0.8023,
+        "mAP_ci95": [
+          0.6288,
+          0.9283
+        ],
+        "verification": {
+          "roc_auc": 0.9679,
+          "positive_pairs": 113,
+          "negative_pairs": 6215,
+          "tpr_at_fpr_0.01": 0.6726,
+          "threshold_at_fpr_0.01": 0.4973,
+          "tpr_at_fpr_0.001": 0.3717,
+          "threshold_at_fpr_0.001": 0.6363
+        }
+      }
+    },
+    "cross_session": {
+      "queries": 20,
+      "query_cats": 2,
+      "gallery_photos": 432,
+      "gallery_cats": 56,
+      "top1": 1.0,
+      "top1_ci95": [
+        1.0,
+        1.0
+      ],
+      "top5": 1.0,
+      "top5_ci95": [
+        1.0,
+        1.0
+      ],
+      "mAP": 0.8542,
+      "mAP_ci95": [
+        0.8345,
+        0.9003
+      ],
+      "verification": {
+        "roc_auc": 0.9681,
+        "positive_pairs": 218,
+        "negative_pairs": 8422,
+        "tpr_at_fpr_0.01": 0.6514,
+        "threshold_at_fpr_0.01": 0.4366,
+        "tpr_at_fpr_0.001": 0.3119,
+        "threshold_at_fpr_0.001": 0.5886
+      },
+      "single_reference": {
+        "queries": 20,
+        "query_cats": 2,
+        "gallery_photos": 56,
+        "gallery_cats": 56,
+        "top1": 0.7,
+        "top1_ci95": [
+          0.5714,
+          1.0
+        ],
+        "top5": 0.9,
+        "top5_ci95": [
+          0.8571,
+          1.0
+        ],
+        "mAP": 0.7635,
+        "mAP_ci95": [
+          0.6621,
+          1.0
+        ],
+        "verification": {
+          "roc_auc": 0.9612,
+          "positive_pairs": 20,
+          "negative_pairs": 1100,
+          "tpr_at_fpr_0.01": 0.65,
+          "threshold_at_fpr_0.01": 0.4063,
+          "tpr_at_fpr_0.001": 0.55,
+          "threshold_at_fpr_0.001": 0.5395
+        }
+      }
+    }
+  },
+  "training": {
+    "stage": "stage3 only (no Hello Street Cat pre-training)",
+    "best_epoch": 13,
+    "loss": "ArcFace s=30 m=0.3",
+    "backbone_lr": 3e-05,
+    "trainable_depth": 4,
+    "train_photos": 932,
+    "train_cats": 53,
+    "seed": 42
+  },
+  "experimental": true,
+  "created_utc": "2026-09-25T02:55:18+00:00",
+  "bundle_sha256": "3bde378a32d8499f82f9bf6e179810f7c4c92f7a233e0254a612defc5e7bf495"
+}

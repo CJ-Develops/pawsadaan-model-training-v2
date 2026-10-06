@@ -1,0 +1,57 @@
+{
+  "note": "ResNet50 control scored on test AFTER DINOv2 was chosen and exported; nothing tuned on test",
+  "thresholds": {
+    "resnet50": 0.6088788509368896,
+    "dinov2": 0.5165491104125977
+  },
+  "test": {
+    "resnet50": {
+      "top1": 0.8053,
+      "top5": 0.9646,
+      "mAP": 0.5391,
+      "auc": 0.9042,
+      "tpr1": 0.4087,
+      "ref1_top1": 0.4602,
+      "ref1_tpr1": 0.4248,
+      "xs_top1": 0.45,
+      "recall": 0.3894,
+      "fpr": 0.00692,
+      "falarm": 0.2212
+    },
+    "dinov2": {
+      "top1": 0.9558,
+      "top5": 1.0,
+      "mAP": 0.7915,
+      "auc": 0.9753,
+      "tpr1": 0.6296,
+      "ref1_top1": 0.7345,
+      "ref1_tpr1": 0.6726,
+      "xs_top1": 1.0,
+      "recall": 0.6549,
+      "fpr": 0.0074,
+      "falarm": 0.2743
+    }
+  },
+  "gap_ci95": {
+    "mAP": [
+      0.1308,
+      0.3791
+    ],
+    "top1": [
+      0.0472,
+      0.2935
+    ],
+    "roc_auc": [
+      0.0252,
+      0.1181
+    ],
+    "tpr_at_fpr_1pct": [
+      0.1232,
+      0.3523
+    ],
+    "single_reference_tpr_at_fpr_1pct": [
+      0.1086,
+      0.42
+    ]
+  }
+}

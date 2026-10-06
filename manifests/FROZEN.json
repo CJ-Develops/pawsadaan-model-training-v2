@@ -1,0 +1,41 @@
+{
+  "frozen_at": "2026-09-24T23:05:09+00:00",
+  "upstream": "PawSaDaan AI Training Collated v2/03_TRAINING_PREPARATION/manifests",
+  "manifest_sha256": {
+    "hellostreetcat_stage2.csv": "9058730c445f780a39640be3dcc6dbb4322d6fbd473b46fb9bbd220848ad7c73",
+    "pawsadaan_stage3.csv": "b0bbb0641b47453cc9962d6e9988f6dcafe68444817b9d9e6bc6a20865146c08",
+    "pawsadaan_session_collection_needed.csv": "d091732c462de9b3ac431c8bbd597c228fda0a7572fb8a9bf03d4a6eb4bfa3b9",
+    "split_summary.json": "c0b8612be7842f2536a594efc8d49b17304ac292850abb71a9a03ab8d240ffc9"
+  },
+  "summary": {
+    "hellostreetcat_stage2.csv": {
+      "rows": 2801,
+      "identities": 68,
+      "rows_by_split": {
+        "excluded_low_count": 46,
+        "test": 619,
+        "train": 1888,
+        "validation": 248
+      },
+      "extensions": {
+        ".jpg": 44,
+        ".png": 2752,
+        ".webp": 5
+      }
+    },
+    "pawsadaan_stage3.csv": {
+      "rows": 1841,
+      "identities": 121,
+      "rows_by_split": {
+        "auxiliary_holdout": 323,
+        "test": 246,
+        "train": 1037,
+        "validation": 235
+      },
+      "extensions": {
+        ".jpeg": 1274,
+        ".jpg": 567
+      }
+    }
+  }
+}

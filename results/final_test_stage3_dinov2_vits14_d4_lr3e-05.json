@@ -1,0 +1,212 @@
+{
+  "model": "stage3_dinov2_vits14_d4_lr3e-05",
+  "threshold": 0.5165491104125977,
+  "validation_at_threshold": {
+    "threshold": 0.5165491104125977,
+    "true_positive": 71,
+    "false_positive": 51,
+    "true_negative": 5229,
+    "false_negative": 25,
+    "recall": 0.7396,
+    "false_positive_rate": 0.00966,
+    "precision": 0.582,
+    "report_catch_rate": 0.7396,
+    "report_false_alarm_rate": 0.4792,
+    "other_cats_per_report": 55
+  },
+  "test_at_threshold": {
+    "threshold": 0.5165491104125977,
+    "true_positive": 74,
+    "false_positive": 46,
+    "true_negative": 6169,
+    "false_negative": 39,
+    "recall": 0.6549,
+    "false_positive_rate": 0.0074,
+    "precision": 0.6167,
+    "report_catch_rate": 0.6549,
+    "report_false_alarm_rate": 0.2743,
+    "other_cats_per_report": 55
+  },
+  "test_metrics": {
+    "all": {
+      "queries": 113,
+      "query_cats": 12,
+      "gallery_photos": 432,
+      "gallery_cats": 56,
+      "top1": 0.9558,
+      "top1_ci95": [
+        0.8991,
+        1.0
+      ],
+      "top5": 1.0,
+      "top5_ci95": [
+        1.0,
+        1.0
+      ],
+      "mAP": 0.7915,
+      "mAP_ci95": [
+        0.6998,
+        0.8745
+      ],
+      "verification": {
+        "roc_auc": 0.9753,
+        "positive_pairs": 1150,
+        "negative_pairs": 47666,
+        "tpr_at_fpr_0.01": 0.6296,
+        "threshold_at_fpr_0.01": 0.4838,
+        "tpr_at_fpr_0.001": 0.4052,
+        "threshold_at_fpr_0.001": 0.6036
+      },
+      "single_reference": {
+        "queries": 113,
+        "query_cats": 12,
+        "gallery_photos": 56,
+        "gallery_cats": 56,
+        "top1": 0.7345,
+        "top1_ci95": [
+          0.5236,
+          0.8932
+        ],
+        "top5": 0.8761,
+        "top5_ci95": [
+          0.713,
+          0.98
+        ],
+        "mAP": 0.8023,
+        "mAP_ci95": [
+          0.6288,
+          0.9283
+        ],
+        "verification": {
+          "roc_auc": 0.9679,
+          "positive_pairs": 113,
+          "negative_pairs": 6215,
+          "tpr_at_fpr_0.01": 0.6726,
+          "threshold_at_fpr_0.01": 0.4973,
+          "tpr_at_fpr_0.001": 0.3717,
+          "threshold_at_fpr_0.001": 0.6363
+        }
+      }
+    },
+    "cross_session": {
+      "queries": 20,
+      "query_cats": 2,
+      "gallery_photos": 432,
+      "gallery_cats": 56,
+      "top1": 1.0,
+      "top1_ci95": [
+        1.0,
+        1.0
+      ],
+      "top5": 1.0,
+      "top5_ci95": [
+        1.0,
+        1.0
+      ],
+      "mAP": 0.8542,
+      "mAP_ci95": [
+        0.8345,
+        0.9003
+      ],
+      "verification": {
+        "roc_auc": 0.9681,
+        "positive_pairs": 218,
+        "negative_pairs": 8422,
+        "tpr_at_fpr_0.01": 0.6514,
+        "threshold_at_fpr_0.01": 0.4366,
+        "tpr_at_fpr_0.001": 0.3119,
+        "threshold_at_fpr_0.001": 0.5886
+      },
+      "single_reference": {
+        "queries": 20,
+        "query_cats": 2,
+        "gallery_photos": 56,
+        "gallery_cats": 56,
+        "top1": 0.7,
+        "top1_ci95": [
+          0.5714,
+          1.0
+        ],
+        "top5": 0.9,
+        "top5_ci95": [
+          0.8571,
+          1.0
+        ],
+        "mAP": 0.7635,
+        "mAP_ci95": [
+          0.6621,
+          1.0
+        ],
+        "verification": {
+          "roc_auc": 0.9612,
+          "positive_pairs": 20,
+          "negative_pairs": 1100,
+          "tpr_at_fpr_0.01": 0.65,
+          "threshold_at_fpr_0.01": 0.4063,
+          "tpr_at_fpr_0.001": 0.55,
+          "threshold_at_fpr_0.001": 0.5395
+        }
+      }
+    },
+    "session_unknown": {
+      "queries": 93,
+      "query_cats": 10,
+      "gallery_photos": 432,
+      "gallery_cats": 56,
+      "top1": 0.9462,
+      "top1_ci95": [
+        0.8709,
+        1.0
+      ],
+      "top5": 1.0,
+      "top5_ci95": [
+        1.0,
+        1.0
+      ],
+      "mAP": 0.778,
+      "mAP_ci95": [
+        0.6795,
+        0.8692
+      ],
+      "verification": {
+        "roc_auc": 0.9773,
+        "positive_pairs": 932,
+        "negative_pairs": 39244,
+        "tpr_at_fpr_0.01": 0.6427,
+        "threshold_at_fpr_0.01": 0.491,
+        "tpr_at_fpr_0.001": 0.4367,
+        "threshold_at_fpr_0.001": 0.6044
+      },
+      "single_reference": {
+        "queries": 93,
+        "query_cats": 10,
+        "gallery_photos": 56,
+        "gallery_cats": 56,
+        "top1": 0.7419,
+        "top1_ci95": [
+          0.5222,
+          0.9184
+        ],
+        "top5": 0.871,
+        "top5_ci95": [
+          0.6913,
+          0.9917
+        ],
+        "mAP": 0.8106,
+        "mAP_ci95": [
+          0.6335,
+          0.9467
+        ],
+        "verification": {
+          "roc_auc": 0.9706,
+          "positive_pairs": 93,
+          "negative_pairs": 5115,
+          "tpr_at_fpr_0.01": 0.6882,
+          "threshold_at_fpr_0.01": 0.5074,
+          "tpr_at_fpr_0.001": 0.3978,
+          "threshold_at_fpr_0.001": 0.6455
+        }
+      }
+    }
+  }
+}
